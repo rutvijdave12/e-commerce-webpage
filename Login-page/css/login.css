@@ -214,6 +214,7 @@ html{
 
 .tab span a{
     color:#000;
+    font-weight: 700;
 }
 
 .tab span a:hover{
