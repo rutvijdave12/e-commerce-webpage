@@ -465,25 +465,28 @@ card animation
   text-align: center;
 }
 
-.card .hidden-tab:hover{
-  opacity:1;
-}
-
-.card .hidden-tab .hidden-content{
-  height: 0;
-  opacity: 1;
-  transition-delay: 0s;
-  transition-duration: 0.4s;
-  width:100%;
-}
-
-.card:hover .hidden-content{
-  opacity: 1;
-  padding-top:60%;
-}
-
-.hidden{
-  opacity:0;
-  /* transform: translateY(10px); */
+@media (min-width: 992px){
+  .card .hidden-tab:hover{
+    opacity:1;
+  }
+  
+  .card .hidden-tab .hidden-content{
+    height: 0;
+    opacity: 1;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    width:100%;
+  }
+  
+  .card:hover .hidden-content{
+    opacity: 1;
+    padding-top:60%;
+  }
+  
+  .hidden{
+    opacity:0;
+    /* transform: translateY(10px); */
+  }
+  
 }
 
