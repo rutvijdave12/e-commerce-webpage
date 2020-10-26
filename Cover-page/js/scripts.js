@@ -81,6 +81,7 @@ $('[data-toggle="tooltip"]').tooltip()
 $(function() {
   $(document).scroll(function(){
   var arrow = $(".fa-2x");
+  arrow.toggleClass("toggle-arrow",$(this).scrollTop() < arrow.height());
   arrow.toggleClass("scrolled",$(this).scrollTop() > arrow.height());
 });
 
@@ -115,6 +116,7 @@ var arrow = document.querySelector(".arrow.bounce");
 arrow.addEventListener("click", function(){
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
 
 
 
