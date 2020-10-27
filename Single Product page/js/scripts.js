@@ -129,6 +129,25 @@ var stars = document.querySelectorAll(".add-review .stars span");
 
 var starContainer = document.querySelector(".add-review .stars");
 
+
+var addStars = function(){
+
+  var num = Number(this.classList[1]);
+  for(var j=0; j<num; j++){
+    stars[j].children[0].setAttribute("data-prefix","fas");
+  }
+  for(var j=num; j<stars.length; j++){
+    stars[j].children[0].setAttribute("data-prefix","far");
+  }
+
+  for(var i=0; i<stars.length; i++){
+    stars[i].removeEventListener("mouseover",addHovering);
+    stars[i].removeEventListener("mouseout",removeHovering);
+  }
+
+  starContainer.removeEventListener("mouseout",removeHoveringCompletely); 
+}
+
 var addHovering = function(){
   var num = Number(this.classList[1]);
   for(var j=0; j<num; j++){
@@ -146,48 +165,12 @@ var removeHoveringCompletely = function(){
   }
 }
 
-var addStars = function(){
-
-  var num = Number(this.classList[1]);
-  for(var j=0; j<num; j++){
-    stars[j].children[0].setAttribute("data-prefix","fas");
-  }
-  for(var j=num; j<stars.length; j++){
-    stars[j].children[0].setAttribute("data-prefix","far");
-  }
-
-  for(var i=0; i<stars.length; i++){
-    stars[i].removeEventListener("mouseover",addHovering);
-  
-  }
-
-  for(var i=0; i<stars.length; i++){
-
-    stars[i].removeEventListener("mouseout",removeHovering);
-  }
-
-
-  starContainer.removeEventListener("mouseout",removeHoveringCompletely);
-
-  
-}
-
 for(var i=0; i<stars.length; i++){
   stars[i].addEventListener("mouseover",addHovering);
-
-}
-
-for(var i=0; i<stars.length; i++){
   stars[i].addEventListener("mouseout",removeHovering);
-}
-
-for(var i=0; i<stars.length; i++){
   stars[i].addEventListener("click",addStars);
+
 }
-
-
-
-  
 
 starContainer.addEventListener("mouseout",removeHoveringCompletely);
 
