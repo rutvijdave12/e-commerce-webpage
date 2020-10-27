@@ -78,7 +78,7 @@
                     <div class="edit-quantity pt-5 row">
                         <div class="col-sm-4">
                           <span class="plus px-2"><i class="fas fa-plus"></i></span>
-                          <span class="quantity px-2">1</span>
+                          <span class="display-quantity px-2">1</span>
                           <span class="minus px-2"><i class="fas fa-minus"></i></span>
                         </div>
                         <div class="col-sm-8 pt-4 pt-sm-0 p-sm-0">
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="wishlist pt-4">
-                        <span class="heart pr-3"><i class="far fa-heart"></i></span>
+                        <span class="heart mr-3"><i class="far fa-heart"></i></span>
                         <span class="wishlist-text">Add to Wishlist</span>
                     </div>
                   </div>
@@ -95,135 +95,173 @@
       </section>
 
       <section class="review-and-info">
-        <nav class="nav justify-content-center">
-          <a class="nav-link active specification" href="#specification">Specification</a>
-          <a class="nav-link reviews" href="#reviews">Reviews</a>
-        </nav>
+        <div class="container px-0">
+          <nav class="nav justify-content-center" id="tabs">
+            <a class="nav-link active specification" href="#tabs" id="specification-button">Specification</a>
+            <a class="nav-link reviews" href="#rtabs" id="reviews-button">Reviews</a>
+          </nav>
+  
+          <div class="display-content container">
+            <div class="display" id="specification">
+              <table>
+                <tr class="">
+                  <td>Product</td>
+                  <td class="right-side">Purchase this product on our website</td>
+                </tr>
+                <tr>
+                  <td>Size and Fit</td>
+                  <td class="right-side">Splittable fabric, oversized coat</td>
+                </tr>
+                <tr>
+                  <td>Model</td>
+                  <td class="right-side">5'7.5" wearing a size small</td>
+                </tr>
+                <tr>
+                  <td>Composition</td>
+                  <td class="right-side">Wool blend, custom plaid, 70% Wool, 30% Polyamide</td>
+                </tr>
+                <tr>
+                  <td>Color</td>
+                  <td class="right-side">Blue, Red</td>
+                </tr>
+                <tr>
+                  <td>Size</td>
+                  <td class="right-side">S, M, L</td>
+                </tr>
+              </table>
+            </div>
+  
+            <div class="remove" id="reviews">
+              <div class="review py-4">
+                <h2 class="review-count my-5">5 reviews for this product</h2>
+                <div class="head d-flex justify-content-between mt-5">
+                  <p>
+                    <span class="name">Mark James</span>
+                    <span>-</span>
+                    <span class="date">October 25, 2019</span>
+                  </p>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
+                <div class="comment">
+                  Nice product
+                </div>
+              </div>
+              <div class="review py-4">
+                <div class="head d-flex justify-content-between">
+                  <p>
+                    <span class="name">Mark James</span>
+                    <span>-</span>
+                    <span class="date">October 25, 2019</span>
+                  </p>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
+                <div class="comment">
+                  Nice product
+                </div>
+              </div>
+              <div class="review py-4">
+                <div class="head d-flex justify-content-between">
+                  <p>
+                    <span class="name">Mark James</span>
+                    <span>-</span>
+                    <span class="date">October 25, 2019</span>
+                  </p>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
+                <div class="comment">
+                  Nice product
+                </div>
+              </div>
+              <div class="review py-4">
+                <div class="head d-flex justify-content-between">
+                  <p>
+                    <span class="name">Mark James</span>
+                    <span>-</span>
+                    <span class="date">October 25, 2019</span>
+                  </p>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
+                <div class="comment">
+                  Nice product
+                </div>
+              </div>
+              <div class="review py-4">
+                <div class="head d-flex justify-content-between">
+                  <p>
+                    <span class="name">Mark James</span>
+                    <span>-</span>
+                    <span class="date">October 25, 2019</span>
+                  </p>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                </div>
+                <div class="comment">
+                  Nice product
+                </div>
+              </div>
+  
+              <div class="add-review">
+                <h2 class="my-4">Add a review</h2>
+                <p class="text-muted my-4">Your email address will not be published. Required fields are marked *</p>
+  
+                <form action="" method="POST">
+                  <label>YOUR RATING</label>
+                <div class="stars">
+                  <span class="star 1"><i class="far fa-star"></i></span>
+                  <span class="star 2"><i class="far fa-star"></i></span>
+                  <span class="star 3"><i class="far fa-star"></i></span>
+                  <span class="star 4"><i class="far fa-star"></i></span>
+                  <span class="star 5"><i class="far fa-star"></i></span>
+                </div>
+  
+                <div class="form-group my-5">
+                  <label>YOUR REVIEW *</label>
+                  <textarea name="review" class="form-control" cols="80" rows="10" required></textarea>
+                </div>
 
-        <div class="display-content container">
-          <div class="display" id="specification">
-            <table>
-              <tr class="">
-                <td>Product</td>
-                <td class="right-side">Purchase this product on our website</td>
-              </tr>
-              <tr>
-                <td>Size and Fit</td>
-                <td class="right-side">Splittable fabric, oversized coat</td>
-              </tr>
-              <tr>
-                <td>Model</td>
-                <td class="right-side">5'7.5" wearing a size small</td>
-              </tr>
-              <tr>
-                <td>Composition</td>
-                <td class="right-side">Wool blend, custom plaid, 70% Wool, 30% Polyamide</td>
-              </tr>
-              <tr>
-                <td>Color</td>
-                <td class="right-side">Blue, Red</td>
-              </tr>
-              <tr>
-                <td>Size</td>
-                <td class="right-side">S, M, L</td>
-              </tr>
-            </table>
-          </div>
+                <div class="form-group my-5">
+                  <label>Name *</label>
+                  <input type="text" name="name" class="form-control" required>
+                </div>
 
-          <div class="remove" id="reviews">
-            <div class="review py-4">
-              <div class="head d-flex justify-content-between">
-                <p>
-                  <span class="name">Mark James</span>
-                  <span>-</span>
-                  <span class="date">October 25, 2019</span>
-                </p>
-                <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-              <div class="comment">
-                Nice product
-              </div>
-            </div>
-            <div class="review py-4">
-              <div class="head d-flex justify-content-between">
-                <p>
-                  <span class="name">Mark James</span>
-                  <span>-</span>
-                  <span class="date">October 25, 2019</span>
-                </p>
-                <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-              <div class="comment">
-                Nice product
-              </div>
-            </div>
-            <div class="review py-4">
-              <div class="head d-flex justify-content-between">
-                <p>
-                  <span class="name">Mark James</span>
-                  <span>-</span>
-                  <span class="date">October 25, 2019</span>
-                </p>
-                <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-              <div class="comment">
-                Nice product
-              </div>
-            </div>
-            <div class="review py-4">
-              <div class="head d-flex justify-content-between">
-                <p>
-                  <span class="name">Mark James</span>
-                  <span>-</span>
-                  <span class="date">October 25, 2019</span>
-                </p>
-                <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-              <div class="comment">
-                Nice product
-              </div>
-            </div>
-            <div class="review py-4">
-              <div class="head d-flex justify-content-between">
-                <p>
-                  <span class="name">Mark James</span>
-                  <span>-</span>
-                  <span class="date">October 25, 2019</span>
-                </p>
-                <p>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </p>
-              </div>
-              <div class="comment">
-                Nice product
+                <div class="form-group my-5">
+                  <label>Email *</label>
+                  <input type="email" name="email" class="form-control" required>
+                </div>
+
+                <div class="form-group my-5">
+                  <input type="submit" class="btn">
+                </div>
+                </form>
               </div>
             </div>
           </div>

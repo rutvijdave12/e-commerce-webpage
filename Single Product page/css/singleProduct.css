@@ -367,8 +367,12 @@ html{
        color:#fff;
    }
 
-   .quantity{
+   .display-quantity{
        font-size: 1.2rem;
+   }
+
+   .plus:hover, .minus:hover{
+     opacity:0.6;
    }
 
    .add-to-cart{
@@ -447,6 +451,69 @@ html{
 
   .display-content{
     margin-bottom: 50px;
+  }
+
+  .heart .fa-heart{
+    color: #f4623a;
+  }
+
+
+  /* 
+  ===========================
+  add review 
+  ===========================
+  */
+
+  .add-review{
+    width:100%;
+    margin-top:40px;
+  }
+
+  .stars{
+    max-width: 106px;
+  }
+
+  .star{
+    color:#f1a81f;
+    font-weight: 100;
+  }
+
+  .hover-stars{
+    color:#f1a81f;
+    font-weight: 800;
+  }
+
+  .starred{
+    color:#f1a81f;
+  }
+
+  .form-group .btn{
+    background:#f4623a;
+    width:200px;
+    border-radius: 0px;
+    color:#fff;
+  }
+
+  .form-control{
+    border-radius: 0;
+    transition: 0.4s;
+  }
+
+  .form-control:hover{
+    border:1px solid #000;
+  }
+
+  .form-control:focus{
+    box-shadow: none;
+    border:1px solid #000;
+  }
+
+  .btn:hover{
+    color:#000;
+  }
+
+  .btn:focus{
+    box-shadow: none;
   }
 
 

@@ -109,5 +109,105 @@ reviews.addEventListener("click",function(){
 var heart = document.querySelector(".wishlist .heart");
 
 heart.addEventListener("click",function(){
-  $(".heart i").toggleClass("far").toggleClass("fa");
-})
+  if(document.querySelector(".fa-heart").getAttribute("data-prefix") == "far"){
+    document.querySelector(".fa-heart").setAttribute("data-prefix","fas");
+    document.querySelector(".wishlist-text").textContent = "Added to Wishlist";
+  }
+  else if(document.querySelector(".fa-heart").getAttribute("data-prefix") == "fas"){
+    document.querySelector(".fa-heart").setAttribute("data-prefix","far");
+    document.querySelector(".wishlist-text").textContent = "Add to Wishlist";
+  }
+ 
+});
+
+
+// ====================
+// star rating
+// ====================
+
+var stars = document.querySelectorAll(".add-review .stars span");
+
+var starContainer = document.querySelector(".add-review .stars");
+
+var addHovering = function(){
+  var num = Number(this.classList[1]);
+  for(var j=0; j<num; j++){
+    stars[j].children[0].setAttribute("data-prefix","fas");
+  }
+}
+
+var removeHovering = function(){
+  this.children[0].setAttribute("data-prefix","far");
+}
+
+var removeHoveringCompletely = function(){
+  for(var i=0; i<stars.length; i++){
+    stars[i].children[0].setAttribute("data-prefix","far");
+  }
+}
+
+var addStars = function(){
+
+  var num = Number(this.classList[1]);
+  for(var j=0; j<num; j++){
+    stars[j].children[0].setAttribute("data-prefix","fas");
+  }
+  for(var j=num; j<stars.length; j++){
+    stars[j].children[0].setAttribute("data-prefix","far");
+  }
+
+  for(var i=0; i<stars.length; i++){
+    stars[i].removeEventListener("mouseover",addHovering);
+  
+  }
+
+  for(var i=0; i<stars.length; i++){
+
+    stars[i].removeEventListener("mouseout",removeHovering);
+  }
+
+
+  starContainer.removeEventListener("mouseout",removeHoveringCompletely);
+
+  
+}
+
+for(var i=0; i<stars.length; i++){
+  stars[i].addEventListener("mouseover",addHovering);
+
+}
+
+for(var i=0; i<stars.length; i++){
+  stars[i].addEventListener("mouseout",removeHovering);
+}
+
+for(var i=0; i<stars.length; i++){
+  stars[i].addEventListener("click",addStars);
+}
+
+
+
+  
+
+starContainer.addEventListener("mouseout",removeHoveringCompletely);
+
+
+
+
+var plus = document.querySelector(".plus");
+var minus = document.querySelector(".minus");
+var displayQuantity = document.querySelector(".display-quantity");
+
+plus.addEventListener("click",function(){
+  var quantity = Number(displayQuantity.textContent);
+  quantity++;
+  displayQuantity.textContent = quantity;
+});
+
+minus.addEventListener("click",function(){
+  var quantity = Number(displayQuantity.textContent);
+  if(quantity>1){
+    quantity--;
+    displayQuantity.textContent = quantity;
+  }
+});
