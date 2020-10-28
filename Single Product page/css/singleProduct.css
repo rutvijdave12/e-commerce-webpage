@@ -445,7 +445,12 @@ html{
   }
 
   .hover-stars{
-    color:#f1a81f;
+    color:#976302;
+    font-weight: 800;
+  }
+
+  .stars .star:hover{
+    color:#976302;
     font-weight: 800;
   }
 

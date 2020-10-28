@@ -145,23 +145,28 @@ var addStars = function(){
     stars[i].removeEventListener("mouseout",removeHovering);
   }
 
+  removeHoveringCompletely();
+
   starContainer.removeEventListener("mouseout",removeHoveringCompletely); 
 }
 
 var addHovering = function(){
   var num = Number(this.classList[1]);
   for(var j=0; j<num; j++){
-    stars[j].children[0].setAttribute("data-prefix","fas");
+    // stars[j].children[0].setAttribute("data-prefix","fas");
+    stars[j].classList.add("hover-stars");
   }
 }
 
 var removeHovering = function(){
-  this.children[0].setAttribute("data-prefix","far");
+  // this.children[0].setAttribute("data-prefix","far");
+  this.classList.add("hover-stars");
 }
 
 var removeHoveringCompletely = function(){
   for(var i=0; i<stars.length; i++){
-    stars[i].children[0].setAttribute("data-prefix","far");
+    // stars[i].children[0].setAttribute("data-prefix","far");
+    stars[i].classList.remove("hover-stars");
   }
 }
 
